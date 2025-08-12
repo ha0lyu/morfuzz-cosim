@@ -25,3 +25,4 @@ cosim_install_shared_lib = yes
 
 cosim_install_prog_srcs = \
 	spike-solve.cc \
+  inst-level.cc

@@ -500,7 +500,7 @@ uint64_t cosim_cj_t::cosim_randomizer_insn(uint64_t in, uint64_t pc) {
   // Mutate
   if (hint_insn(in) != not_hint) {
     new_inst = in;
-  } else if (start_randomize && !in_fuzz_handler_range(pc)) {
+  } else if (!in_fuzz_handler_range(pc)) {  // start_randomize &&
     new_inst = insn.mutation(cj_debug);
   } else {
     new_inst = in;
